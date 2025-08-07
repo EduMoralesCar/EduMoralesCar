@@ -283,7 +283,7 @@
         <img align="left" width="400" height="185px" src="https://github-readme-stats.vercel.app/api?username=EduMoralesCar&show_icons=true&theme=dark" alt="GitHub Stats"/>
     </p>
     <p>
-        <img align="right" width="400" height="185" src="https://streak-stats.demolab.com/?user=EduMoralesCar&theme=dark&hide_border=true&date_format=j%20M%5B%20Y%5D" alt="GitHub Streak"/>
+        <img align="right" width="400" height="185" src="https://streak-stats.demolab.com/?user=EduMoralesCar&amp;theme=dark&amp;date_format=j%20M%5B%20Y%5D" alt="GitHub Streak"/>
     </p>
 </div>
 
