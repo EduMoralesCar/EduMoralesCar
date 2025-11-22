@@ -24,15 +24,6 @@
 <br><br><br>
 
 
-<!-- Life Motto Section -->
-<hr>
-<p align="center">
-    <img 
-        src="https://i.postimg.cc/PxyQkK3V/Copilot-20250709-181658.png" 
-        alt="Life Motto" 
-        style="width: 600px; height: auto;" 
-    />
-</p>
 
 
 
