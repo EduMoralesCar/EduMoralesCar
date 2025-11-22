@@ -10,10 +10,11 @@
 
 <!-- Life Motto Section -->
 <hr>
-<img align="right" alt="Coding" width="350" src="https://i.pinimg.com/originals/81/17/8b/81178b47a8598f0c81c4799f2cdd4057.gif">
+<img align="right" alt="Coding" width="300" src="https://i.pinimg.com/originals/81/17/8b/81178b47a8598f0c81c4799f2cdd4057.gif">
 <br>
 <p>
-    My name is <strong>Edu Morales</strong>. I am currently pursuing <em>Software Engineering</em> at the <a href="https://www.utp.edu.pe/" target="_blank">Technological University of Peru</a>.
+    My name is <strong>Edu Morales</strong>. I am currently pursuing <em>Software Engineering</em> at the 
+    <br><a href="https://www.utp.edu.pe/" target="_blank">Technological University of Peru</a>.
 </p>
 <p>
     Passionate about <strong>technology</strong>, I believe in its potential to transform society and improve lives. I am currently exploring the fascinating field of <strong>Artificial Intelligence</strong>, where I aim to keep learning and growing professionally.
