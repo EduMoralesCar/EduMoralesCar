@@ -22,8 +22,7 @@
 <p>
     I am always open to new opportunities to collaborate, contribute, and be part of innovative projects that create a positive impact.
 </p>
-<br><br>
-
+<br>
 
 
 
