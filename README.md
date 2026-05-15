@@ -1,309 +1,144 @@
-<!-- Life Motto Section -->
-<a href="#">
-    <img 
-        alt="Welcome" 
-        width="100%" 
-        style="padding-right: 10px; max-width: 100%; height: auto;" 
-        src="https://raw.githubusercontent.com/HighAmbition211/HighAmbition211/auxiliary/others/Welcome.svg" 
-    />
-</a>
+<!--
+  Estadísticas: github-readme-stats.vercel.app suele devolver 503 (despliegue pausado).
+  Aquí se usa un espejo comunitario funcional; si deja de responder, despliega tu propia
+  instancia: https://github.com/anuraghazra/github-readme-stats
+-->
 
-<!-- Life Motto Section -->
-<hr>
-<img align="right" alt="Coding" width="300" src="https://i.pinimg.com/originals/81/17/8b/81178b47a8598f0c81c4799f2cdd4057.gif">
-<br>
-<p>
-    My name is <strong>Edu Morales</strong>. I am currently pursuing <em>Software Engineering</em> at the 
-    <br><a href="https://www.utp.edu.pe/" target="_blank">Technological University of Peru</a>.
-</p>
-<p>
-    Passionate about <strong>technology</strong>, I believe in its potential to transform society and improve lives. I am currently exploring the fascinating field of <strong>Artificial Intelligence</strong>, where I aim to keep learning and growing professionally.
-</p>
-<p>
-    I am always open to new opportunities to collaborate, contribute, and be part of innovative projects that create a positive impact.
-</p>
-<br>
-
-
-
-<hr>
-<h3>
-    <p align="center">
-        <img src = "https://raw.githubusercontent.com/HighAmbition211/HighAmbition211/auxiliary/others/skill.gif" width = 20px alt="Skills">
-        &nbsp;<b font-size="">My Skill Sets</b>
-    </p>
-</h3>
-<hr>
-
-### Front-End
-<table align="center">
-  <tr>
-    <td align="center" width="90">
-        <a href="https://skillicons.dev">
-            <img 
-                src="https://skillicons.dev/icons?i=html&perline=8" 
-                alt="HTML" 
-            />
-        </a>
-        <br>HTML
-    </td>
-    <td align="center" width="90">
-        <a href="https://skillicons.dev">
-            <img 
-                src="https://skillicons.dev/icons?i=css&perline=8" 
-                alt="CSS" 
-            />
-        </a>
-        <br>CSS
-    </td>
-    <td align="center" width="90">
-        <a href="https://skillicons.dev">
-            <img 
-                src="https://skillicons.dev/icons?i=js&perline=8" 
-                alt="JavaScript" 
-            />
-        </a>
-        <br>JavaScript
-    </td>
-    <td align="center" width="90">
-        <a href="https://skillicons.dev">
-            <img 
-                src="https://skillicons.dev/icons?i=react&perline=8" 
-                alt="React" 
-            />
-        </a>
-        <br>React
-    </td>
-    <td align="center" width="90">
-        <a href="https://skillicons.dev">
-            <img 
-                src="https://skillicons.dev/icons?i=tailwind&perline=8" 
-                alt="Tailwind" 
-            />
-        </a>
-        <br>Tailwind
-    </td>
-    <td align="center" width="90">
-        <a href="https://skillicons.dev">
-            <img 
-                src="https://skillicons.dev/icons?i=sass&perline=8" 
-                alt="Sass" 
-            />
-        </a>
-        <br>Sass
-    </td>
-    <td align="center" width="90">
-        <a href="https://skillicons.dev">
-            <img 
-                src="https://skillicons.dev/icons?i=figma&perline=8" 
-                alt="Figma" 
-            />
-        </a>
-        <br>Figma
-    </td>
-  </tr>
-</table>
-
-### Back-End
-<table align="center">
-  <tr>
-    <td align="center" width="90">
-        <a href="https://skillicons.dev">
-            <img 
-                src="https://skillicons.dev/icons?i=java&perline=8" 
-                alt="Java" 
-            />
-        </a>
-        <br>Java
-    </td>
-    <td align="center" width="90">
-        <a href="https://skillicons.dev">
-            <img 
-                src="https://skillicons.dev/icons?i=php&perline=8" 
-                alt="PHP" 
-            />
-        </a>
-        <br>PHP
-    </td>
-    <td align="center" width="90">
-        <a href="https://skillicons.dev">
-            <img 
-                src="https://skillicons.dev/icons?i=spring&perline=8" 
-                alt="Spring" 
-            />
-        </a>
-        <br>Spring
-    </td>
-    <td align="center" width="90">
-        <a href="https://skillicons.dev">
-            <img 
-                src="https://skillicons.dev/icons?i=nodejs&perline=8" 
-                alt="NodeJS" 
-            />
-        </a>
-        <br>NodeJS
-    </td>
-    <td align="center" width="90">
-        <a href="https://skillicons.dev">
-            <img 
-                src="https://skillicons.dev/icons?i=mongodb&perline=8" 
-                alt="MongoDB" 
-            />
-        </a>
-        <br>MongoDB
-    </td>
-    <td align="center" width="90">
-        <a href="https://skillicons.dev">
-            <img 
-                src="https://skillicons.dev/icons?i=mysql&perline=8" 
-                alt="MySQL" 
-            />
-        </a>
-        <br>MySQL
-    </td>
-  </tr>
-</table>
-
-### Tools
-<table align="center">
-  <tr>
-    <td align="center" width="90">
-        <a href="https://skillicons.dev">
-            <img 
-                src="https://skillicons.dev/icons?i=github&perline=8" 
-                alt="Github" 
-            />
-        </a>
-        <br>Github
-    </td>
-    <td align="center" width="90">
-        <a href="https://skillicons.dev">
-            <img 
-                src="https://skillicons.dev/icons?i=git&perline=8" 
-                alt="Git" 
-            />
-        </a>
-        <br>Git
-    </td>
-    <td align="center" width="90">
-        <a href="https://skillicons.dev">
-            <img 
-                src="https://skillicons.dev/icons?i=vscode&perline=8" 
-                alt="VS Code" 
-            />
-        </a>
-        <br>VS Code
-    </td>
-    <td align="center" width="90">
-        <a href="https://skillicons.dev">
-            <img 
-                src="https://skillicons.dev/icons?i=npm&perline=8" 
-                alt="NPM" 
-            />
-        </a>
-        <br>NPM
-    </td>
-    <td align="center" width="90">
-        <a href="https://skillicons.dev">
-            <img 
-                src="https://skillicons.dev/icons?i=notion&perline=8" 
-                alt="Notion" 
-            />
-        </a>
-        <br>Notion
-    </td>
-  </tr>
-</table>
-
-### Learning
-<table align="center">
-  <tr>
-    <td align="center" width="90">
-        <a href="https://skillicons.dev">
-            <img 
-                src="https://skillicons.dev/icons?i=python&perline=8" 
-                alt="Python" 
-            />
-        </a>
-        <br>Python
-    </td>
-    <td align="center" width="90">
-        <a href="https://skillicons.dev">
-            <img 
-                src="https://skillicons.dev/icons?i=typescript&perline=8" 
-                alt="TypeScript" 
-            />
-        </a>
-        <br>TypeScript
-    </td>
-    <td align="center" width="90">
-        <a href="https://skillicons.dev">
-            <img 
-                src="https://skillicons.dev/icons?i=astro&perline=8" 
-                alt="Astro" 
-            />
-        </a>
-        <br>Astro
-    </td>
-    <td align="center" width="90">
-        <a href="https://skillicons.dev">
-            <img 
-                src="https://skillicons.dev/icons?i=docker&perline=8" 
-                alt="Docker" 
-            />
-        </a>
-        <br>Docker
-    </td>
-  </tr>
-</table>
-
-
-
-<!-- Git Activeness Section -->
-<hr>
-<h3>
-    <p align="center">
-        <img src="https://media.giphy.com/media/W5eoZHPpUx9sapR0eu/giphy.gif" width="30px" alt="Git"/>
-        &nbsp;<b font-size="">Git Activeness</b>
-    </p>
-</h3>
-<hr>
-
-<div style="overflow: auto;">
-    <p>
-        <img align="left" width="400" height="185px" src="https://github-readme-stats.vercel.app/api?username=EduMoralesCar&show_icons=true&theme=dark" alt="GitHub Stats"/>
-    </p>
-    <p>
-        <img align="right" width="400" height="185" src="https://streak-stats.demolab.com/?user=EduMoralesCar&amp;theme=dark&amp;date_format=j%20M%5B%20Y%5D" alt="GitHub Streak"/>
-    </p>
+<div align="center">
+  <img
+    src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,50:1e3a5f,100:0ea5e9&height=190&section=header&text=Edu%20Morales&fontSize=42&fontAlignY=38&desc=Ingenier%C3%ADa%20de%20Software%20%C2%B7%20IA%20%C2%B7%20Per%C3%BA&descSize=18&descAlignY=58&animation=twinkling"
+    alt="Encabezado de perfil — Edu Morales"
+    width="100%"
+  />
 </div>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+### Hola, soy Edu
 
-<a href="#-my-github-stats--"><img width="100%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=EduMoralesCar&theme=dark" alt="goldsunshines" /></a>
+Ingeniero de software en formación en la [Universidad Tecnológica del Perú](https://www.utp.edu.pe/). Me motiva construir productos útiles, aprender **inteligencia artificial** aplicada y colaborar en proyectos con impacto real.
 
-<hr>
+<div align="center">
 
-<!-- Finish Section -->
-<a href="#">
-    <img 
-        align="left" 
-        alt="Finish" 
-        width="100%" 
-        style="padding: 10px;" 
-        src="https://raw.githubusercontent.com/HighAmbition211/HighAmbition211/auxiliary/others/Finish.svg" 
+[![UTP](https://img.shields.io/badge/UTP-Ingenier%C3%ADa%20de%20Software-0ea5e9?style=for-the-badge&logo=google-scholar&logoColor=white)](https://www.utp.edu.pe/)
+[![GitHub followers](https://img.shields.io/github/followers/EduMoralesCar?label=Seguidores&style=for-the-badge&logo=github&color=1e293b)](https://github.com/EduMoralesCar?tab=followers)
+[![GitHub stars](https://img.shields.io/github/stars/EduMoralesCar?label=Estrellas&style=for-the-badge&logo=github&color=1e293b)](https://github.com/EduMoralesCar?tab=repositories&q=&sort=stargazers)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/edu-morales-carlos-828602231/)
+[![Correo](https://img.shields.io/badge/Correo-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:edomocar@gmail.com)
+
+</div>
+
+---
+
+### Stack
+
+#### Front-end
+
+<p align="center">
+  <a href="https://skillicons.dev" title="Front-end">
+    <img
+      src="https://skillicons.dev/icons?i=html,css,js,ts,react,nextjs,vue,svelte,astro,tailwind,sass,bootstrap,materialui,redux,htmx,jquery,d3,electron,threejs&perline=10&theme=dark"
+      alt="Tecnologías front-end"
     />
-</a>
+  </a>
+</p>
 
+#### Back-end, APIs y datos
 
-<br>
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=EduMoralesCar&label=Profile%20views&color=0e75b6&style=flat" alt="EduMoralesCar" /> </p>
+<p align="center">
+  <a href="https://skillicons.dev" title="Back-end y datos">
+    <img
+      src="https://skillicons.dev/icons?i=php,laravel,java,spring,hibernate,kotlin,nodejs,express,nestjs,python,django,flask,fastapi,graphql,mongodb,mysql,postgres,redis,sqlite,prisma,sequelize,dynamodb,kafka,rabbitmq,nginx&perline=10&theme=dark"
+      alt="Back-end, APIs y bases de datos"
+    />
+  </a>
+</p>
 
+#### Herramientas, entorno y DevOps
+
+<p align="center">
+  <a href="https://skillicons.dev" title="Herramientas">
+    <img
+      src="https://skillicons.dev/icons?i=git,github,githubactions,gitlab,docker,kubernetes,terraform,linux,ubuntu,debian,bash,powershell,vite,webpack,babel,npm,yarn,pnpm,bun,vscode,idea,pycharm,eclipse,postman,gradle,maven,md,regex&perline=10&theme=dark"
+      alt="Herramientas y entorno de desarrollo"
+    />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://skillicons.dev" title="Nube y calidad">
+    <img
+      src="https://skillicons.dev/icons?i=aws,gcp,azure,cloudflare,vercel,netlify,heroku,firebase,supabase,jest,cypress,selenium,figma,notion&perline=10&theme=dark"
+      alt="Nube, despliegue y diseño"
+    />
+  </a>
+</p>
+
+#### Explorando y aprendiendo
+
+<p align="center">
+  <a href="https://skillicons.dev" title="En aprendizaje">
+    <img
+      src="https://skillicons.dev/icons?i=rust,go,cs,dotnet,scala,r,dart,flutter,androidstudio,deno,pytorch,tensorflow,opencv,anaconda,elasticsearch,prometheus,grafana&perline=10&theme=dark"
+      alt="Tecnologías en exploración"
+    />
+  </a>
+</p>
+
+---
+
+### Actividad en GitHub
+
+<p align="center">
+  <img
+    width="49%"
+    src="https://github-readme-stats-salesp07.vercel.app/api?username=EduMoralesCar&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&rank_icon=github"
+    alt="Estadísticas de GitHub de EduMoralesCar"
+  />
+  <img
+    width="49%"
+    src="https://streak-stats.demolab.com/?user=EduMoralesCar&theme=tokyonight&hide_border=true&date_format=j%20M%5B%20Y%5D&mode=daily"
+    alt="Racha de contribuciones en GitHub"
+  />
+</p>
+
+<p align="center">
+  <img
+    width="49%"
+    src="https://github-readme-stats-salesp07.vercel.app/api/top-langs/?username=EduMoralesCar&layout=compact&theme=tokyonight&hide_border=true&langs_count=8"
+    alt="Lenguajes más usados en GitHub"
+  />
+  <img
+    width="49%"
+    src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=EduMoralesCar&theme=nord_dark&utcOffset=-5"
+    alt="Horas más productivas (UTC-5, Lima)"
+  />
+</p>
+
+<p align="center">
+  <img
+    width="95%"
+    src="https://github-readme-activity-graph.vercel.app/graph?username=EduMoralesCar&theme=tokyo-night&hide_border=true&area=true&custom_title=Contribuciones%20en%20el%20%C3%BAltimo%20a%C3%B1o"
+    alt="Gráfico de contribuciones en GitHub"
+  />
+</p>
+
+<p align="center">
+  <img
+    width="95%"
+    src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=EduMoralesCar&theme=nord_dark"
+    alt="Resumen del perfil de GitHub"
+  />
+</p>
+
+---
+
+<div align="center">
+  <img
+    src="https://capsule-render.vercel.app/api?type=waving&color=0:0ea5e9,50:1e3a5f,100:0f172a&height=120&section=footer&fontSize=42"
+    alt="Pie de perfil"
+    width="100%"
+  />
+</div>
+
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=EduMoralesCar&label=Vistas%20del%20perfil&color=0ea5e9&style=flat" alt="Contador de vistas del perfil" />
+</p>
