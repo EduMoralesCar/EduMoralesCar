@@ -113,13 +113,7 @@ Ingeniero de software en formación en la [Universidad Tecnológica del Perú](h
   />
 </p>
 
-<p align="center">
-  <img
-    width="95%"
-    src="https://github-readme-activity-graph.vercel.app/graph?username=EduMoralesCar&theme=tokyo-night&hide_border=true&area=true&custom_title=Contribuciones%20en%20el%20%C3%BAltimo%20a%C3%B1o"
-    alt="Gráfico de contribuciones en GitHub"
-  />
-</p>
+
 
 <p align="center">
   <img
