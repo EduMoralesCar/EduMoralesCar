@@ -1,12 +1,14 @@
 <!--
-  Estadísticas: github-readme-stats.vercel.app suele devolver 503 (despliegue pausado).
-  Aquí se usa un espejo comunitario funcional; si deja de responder, despliega tu propia
-  instancia: https://github.com/anuraghazra/github-readme-stats
+  Todas las tarjetas de estadísticas se generan automáticamente como SVG estáticos
+  mediante GitHub Actions (.github/workflows/update-profile-stats.yml) y se publican
+  en la rama `output`, evitando caídas o límites de servidores externos en Vercel.
+  Opcional: agrega el secreto `PROFILE_STATS_TOKEN` (PAT) si deseas incluir actividad
+  de repositorios privados.
 -->
 
 <div align="center">
   <img
-    src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,50:1e3a5f,100:0ea5e9&height=190&section=header&text=Edu%20Morales&fontSize=42&fontAlignY=38&desc=Ingenier%C3%ADa%20de%20Software%20%C2%B7%20IA%20%C2%B7%20Per%C3%BA&descSize=18&descAlignY=58&animation=twinkling"
+    src="./assets/header.svg"
     alt="Encabezado de perfil — Edu Morales"
     width="100%"
   />
@@ -90,12 +92,12 @@ Ingeniero de software en formación en la [Universidad Tecnológica del Perú](h
 <p align="center">
   <img
     width="49%"
-    src="https://github-readme-stats-salesp07.vercel.app/api?username=EduMoralesCar&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&rank_icon=github"
+    src="https://raw.githubusercontent.com/EduMoralesCar/EduMoralesCar/output/stats.svg"
     alt="Estadísticas de GitHub de EduMoralesCar"
   />
   <img
     width="49%"
-    src="https://streak-stats.demolab.com/?user=EduMoralesCar&theme=tokyonight&hide_border=true&date_format=j%20M%5B%20Y%5D&mode=daily"
+    src="https://raw.githubusercontent.com/EduMoralesCar/EduMoralesCar/output/streak.svg"
     alt="Racha de contribuciones en GitHub"
   />
 </p>
@@ -103,22 +105,28 @@ Ingeniero de software en formación en la [Universidad Tecnológica del Perú](h
 <p align="center">
   <img
     width="49%"
-    src="https://github-readme-stats-salesp07.vercel.app/api/top-langs/?username=EduMoralesCar&layout=compact&theme=tokyonight&hide_border=true&langs_count=8"
+    src="https://raw.githubusercontent.com/EduMoralesCar/EduMoralesCar/output/top-langs.svg"
     alt="Lenguajes más usados en GitHub"
   />
   <img
     width="49%"
-    src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=EduMoralesCar&theme=nord_dark&utcOffset=-5"
+    src="https://raw.githubusercontent.com/EduMoralesCar/EduMoralesCar/output/productive-time.svg"
     alt="Horas más productivas (UTC-5, Lima)"
   />
 </p>
 
-
+<p align="center">
+  <img
+    width="95%"
+    src="https://raw.githubusercontent.com/EduMoralesCar/EduMoralesCar/output/activity-graph.svg"
+    alt="Gráfico de contribuciones recientes en GitHub"
+  />
+</p>
 
 <p align="center">
   <img
     width="95%"
-    src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=EduMoralesCar&theme=nord_dark"
+    src="https://raw.githubusercontent.com/EduMoralesCar/EduMoralesCar/output/profile-details.svg"
     alt="Resumen del perfil de GitHub"
   />
 </p>
@@ -127,7 +135,7 @@ Ingeniero de software en formación en la [Universidad Tecnológica del Perú](h
 
 <div align="center">
   <img
-    src="https://capsule-render.vercel.app/api?type=waving&color=0:0ea5e9,50:1e3a5f,100:0f172a&height=120&section=footer&fontSize=42"
+    src="./assets/footer.svg"
     alt="Pie de perfil"
     width="100%"
   />

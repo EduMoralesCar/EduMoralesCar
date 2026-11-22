@@ -1,0 +1,244 @@
+name: Update Profile Stats
+
+on:
+  schedule:
+    # Actualiza todos los días a las 06:00 UTC (01:00 hora de Lima, UTC-5)
+    - cron: "0 6 * * *"
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/update-profile-stats.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: update-profile-stats
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  stats:
+    name: Generate GitHub Stats card
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate stats SVG
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: stats
+          options: username=${{ github.repository_owner }}&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&rank_icon=github
+          path: out/stats.svg
+          token: ${{ secrets.PROFILE_STATS_TOKEN || github.token }}
+          fail_on_error: true
+
+      - name: Validate SVG
+        run: |
+          test -s out/stats.svg
+          grep -q '<svg' out/stats.svg
+          ! grep -qiE 'Something went wrong|Something unexpected happened|MAX_RETRY|rate limit' out/stats.svg
+
+      - name: Upload stats artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: card-stats
+          path: out/stats.svg
+          if-no-files-found: error
+          retention-days: 1
+
+  top-langs:
+    name: Generate Top Languages card
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate top-langs SVG
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: top-langs
+          options: username=${{ github.repository_owner }}&layout=compact&theme=tokyonight&hide_border=true&langs_count=8
+          path: out/top-langs.svg
+          token: ${{ secrets.PROFILE_STATS_TOKEN || github.token }}
+          fail_on_error: true
+
+      - name: Validate SVG
+        run: |
+          test -s out/top-langs.svg
+          grep -q '<svg' out/top-langs.svg
+          ! grep -qiE 'Something went wrong|Something unexpected happened|MAX_RETRY|rate limit' out/top-langs.svg
+
+      - name: Upload top-langs artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: card-top-langs
+          path: out/top-langs.svg
+          if-no-files-found: error
+          retention-days: 1
+
+  streak:
+    name: Generate Streak Stats card
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate streak SVG
+        uses: DenverCoder1/github-readme-streak-stats@v1
+        with:
+          options: user=${{ github.repository_owner }}&theme=tokyonight&hide_border=true&date_format=j%20M%5B%20Y%5D&mode=daily
+          path: out/streak.svg
+          token: ${{ secrets.PROFILE_STATS_TOKEN || github.token }}
+
+      - name: Validate SVG
+        run: |
+          test -s out/streak.svg
+          grep -q '<svg' out/streak.svg
+          ! grep -qiE 'Something went wrong|Could not|rate limit|Error:' out/streak.svg
+
+      - name: Upload streak artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: card-streak
+          path: out/streak.svg
+          if-no-files-found: error
+          retention-days: 1
+
+  summary-cards:
+    name: Generate Profile Summary cards
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate summary cards SVGs
+        uses: vn7n24fzkq/github-profile-summary-cards@release
+        env:
+          GITHUB_TOKEN: ${{ secrets.PROFILE_STATS_TOKEN || github.token }}
+        with:
+          USERNAME: ${{ github.repository_owner }}
+          TIME_ZONE: America/Lima
+          THEME: tokyonight
+          NAME: Edu Morales
+          AUTO_PUSH: false
+
+      - name: Collect and validate SVGs
+        run: |
+          set -euo pipefail
+          mkdir -p out
+          failed=0
+
+          for pair in \
+            "profile-summary-card-output/tokyonight/0-profile-details.svg:out/profile-details.svg" \
+            "profile-summary-card-output/tokyonight/4-productive-time.svg:out/productive-time.svg"
+          do
+            src="${pair%%:*}"
+            dst="${pair##*:}"
+            if [ -s "$src" ] && grep -q '<svg' "$src" && ! grep -qiE 'Something went wrong|not supported|Error:' "$src"; then
+              cp "$src" "$dst"
+            else
+              echo "::error::Missing or invalid SVG: $src"
+              failed=1
+            fi
+          done
+
+          if [ ! -s out/profile-details.svg ] && [ ! -s out/productive-time.svg ]; then
+            exit 1
+          fi
+          echo "partial_failure=$failed" >> "$GITHUB_ENV"
+
+      - name: Upload summary cards artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: card-summary
+          path: out/*.svg
+          if-no-files-found: error
+          retention-days: 1
+
+      - name: Fail job if any summary card was missing
+        if: env.partial_failure == '1'
+        run: exit 1
+
+  activity-graph:
+    name: Generate Activity Graph card
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate activity-graph SVG
+        uses: maurodesouza/github-readme-activity-graph-action@v1
+        with:
+          username: ${{ github.repository_owner }}
+          options: theme=tokyo-night&hide_border=true&area=true&custom_title=Contribuciones%20recientes%20%28%C3%BAltimos%2031%20d%C3%ADas%29
+          output_path: out/activity-graph.svg
+          token: ${{ secrets.PROFILE_STATS_TOKEN || github.token }}
+
+      - name: Validate SVG
+        run: |
+          test -s out/activity-graph.svg
+          grep -q '<svg' out/activity-graph.svg
+          ! grep -qiE 'Something went wrong|Something unexpected happened|rate limit' out/activity-graph.svg
+
+      - name: Upload activity-graph artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: card-activity-graph
+          path: out/activity-graph.svg
+          if-no-files-found: error
+          retention-days: 1
+
+  publish:
+    name: Publish cards to output branch
+    needs: [stats, top-langs, streak, summary-cards, activity-graph]
+    if: always() && !cancelled()
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          persist-credentials: true
+
+      - name: Prepare temp directory
+        run: mkdir -p "${{ runner.temp }}/generated"
+
+      - name: Download generated cards
+        uses: actions/download-artifact@v4
+        with:
+          pattern: card-*
+          path: ${{ runner.temp }}/generated
+          merge-multiple: true
+
+      - name: Update output branch preserving previous valid cards
+        run: |
+          set -euo pipefail
+          mapfile -t svgs < <(find "${{ runner.temp }}/generated" -type f -name '*.svg')
+          if [ "${#svgs[@]}" -eq 0 ]; then
+            echo "::error::No valid SVG cards were generated in this run."
+            exit 1
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          if git ls-remote --exit-code --heads origin output >/dev/null 2>&1; then
+            git fetch origin +refs/heads/output:refs/remotes/origin/output --depth=1
+            git checkout -B output refs/remotes/origin/output
+          else
+            git checkout --orphan output
+            git rm -rf . >/dev/null 2>&1 || true
+          fi
+
+          for svg in "${svgs[@]}"; do
+            cp -f "$svg" "./$(basename "$svg")"
+          done
+
+          git add -- *.svg
+          if git diff --cached --quiet; then
+            echo "No changes to SVG cards."
+            exit 0
+          fi
+
+          git commit -m "chore(stats): update profile SVG cards"
+          git push -u origin output
