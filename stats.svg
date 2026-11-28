@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">Edu Morales&#39; GitHub Stats, Rank: A-</title>
-        <desc id="descId">Total Stars Earned: 47, Total Commits  : 2145, Total PRs: 269, Total Issues: 12, Contributed to (last year): 8</desc>
+        <desc id="descId">Total Stars Earned: 47, Total Commits  : 2146, Total PRs: 269, Total Issues: 12, Contributed to (last year): 8</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 93.96213059707996;
+        stroke-dashoffset: 93.95556832514308;
       }
     }
   
